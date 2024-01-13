@@ -1,0 +1,8 @@
+pydicom
+vtk
+scipy
+#h5py
+imageio-ffmpeg
+SimpleITK
+Pyvista
+ipyvtklink
