@@ -4,12 +4,15 @@ from pydicom.pixel_data_handlers.util import apply_modality_lut
 #from pydicom.data import get_testdata_file
 from matplotlib import pyplot as plt
 import os
+import sys
 from os import listdir
 from os.path import isfile, join
 import numpy as np
 
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+
 from scipy.ndimage import zoom
-from util import pvplotgif, pvplot_multiview, pvplot_overlayvolume, onehot_3d, normalize_3d,normalize_8bit
+from viewer.util import pvplotgif, pvplot_multiview, pvplot_overlayvolume, onehot_3d, normalize_3d, normalize_8bit
 import SimpleITK as sitk
 
 import pyvista as pv

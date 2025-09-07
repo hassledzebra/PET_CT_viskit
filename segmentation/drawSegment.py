@@ -1,11 +1,14 @@
 import cv2
 
-
 import torch
 import numpy as np
 import os
 from torch.utils.data import TensorDataset, DataLoader
-import util
+import sys
+
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+
+from viewer import util
 
 def path_prep_data(rootpath, patient_ID):
     patient_ID = str(patient_ID)
