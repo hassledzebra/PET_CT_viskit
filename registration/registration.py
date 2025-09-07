@@ -5,10 +5,14 @@ import matplotlib.pyplot as plt
 import SimpleITK as sitk
 
 import pyvista as pv
-import registration_gui as rgui
-
-from util import normalized_3d, pvplotgif, save_transform
 import os
+import sys
+
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+
+from . import registration_gui as rgui
+
+from viewer.util import normalized_3d, pvplotgif, save_transform
 
 # import gui
 # import registration_gui as rgui

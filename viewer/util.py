@@ -7,7 +7,11 @@ from scipy import ndimage
 import SimpleITK as sitk
 
 import pyvista as pv
-import registration_gui as rgui
+import sys
+
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+
+from registration import registration_gui as rgui
 
 import tkinter as tk
 from tkinter import ttk

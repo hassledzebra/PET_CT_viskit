@@ -5,8 +5,12 @@ import SimpleITK as sitk
 
 import pyvista as pv
 
-from util import pvplot_multiview
 import os
+import sys
+
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+
+from viewer.util import pvplot_multiview
 
 def apply_transform(tranform_folder, fixed_file, moving_file):
     #tranform_folder = 'p1t1'
@@ -34,6 +38,6 @@ def apply_transform(tranform_folder, fixed_file, moving_file):
     # pvplot_multiview([fixed_np, moving_np, moving_r_array], moving_np_path.split('.')[-2]+'reg_comp',
     #                     ['Fixed','moving','registered'],['jet','jet','jet'], c_clims=([0,1],[0,1],[0,1]))
     pvplot_multiview([fixed_np, moving_np, moving_r_array], moving_np_path.split('.')[-2]+'reg_comp',
-                        ['Fixed','moving','registered'],['jet','jet','jet'])
+                     ['Fixed', 'moving', 'registered'], ['jet', 'jet', 'jet'])
 
     np.save(moving_np_path.split('.')[-2]+'_t.npy', out)
